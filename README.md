@@ -24,7 +24,7 @@ Since UMA's oracle infrastructure is not natively deployed on Arc Testnet, the d
 
 ## Prerequisites
 
-- **Node.js v20.9+** - Install via [nvm](https://github.com/nvm-sh/nvm) (required by Next.js 16)
+- **Node.js v22.13+** - Install via [nvm](https://github.com/nvm-sh/nvm) (required by Hardhat 3, which `npm run compile` and `npm run deploy` use)
 - **A wallet** - either:
   - **MetaMask** (or any injected EVM wallet) - connected to **Arc Testnet** (Chain ID `5042002`), or
   - **Circle Passkey Wallet** - browser-based biometric authentication via WebAuthn (no extension needed). Requires a [Circle developer account](https://console.circle.com/) for the client key and URL.
