@@ -24,7 +24,7 @@ Since UMA's oracle infrastructure is not natively deployed on Arc Testnet, the d
 
 ## Prerequisites
 
-- **Node.js v20+** - Install via [nvm](https://github.com/nvm-sh/nvm)
+- **Node.js v22.13+** - Install via [nvm](https://github.com/nvm-sh/nvm) (required by Hardhat 3, which `npm run compile` and `npm run deploy` use)
 - **A wallet** - either:
   - **MetaMask** (or any injected EVM wallet) - connected to **Arc Testnet** (Chain ID `5042002`), or
   - **Circle Passkey Wallet** - browser-based biometric authentication via WebAuthn (no extension needed). Requires a [Circle developer account](https://console.circle.com/) for the client key and URL.
@@ -61,7 +61,7 @@ Since UMA's oracle infrastructure is not natively deployed on Arc Testnet, the d
    cp .env.example .env.local
    ```
 
-   Edit `.env.local` and fill in your deployer private key and (optionally) Circle credentials (see [Environment Variables](#environment-variables)). The Arc Testnet RPC URL is pre-filled.
+   Edit `.env.local` and fill in your deployer private key and (optionally) Circle credentials (see [Environment Variables](#environment-variables)). `NEXT_PUBLIC_ALCHEMY_RPC_URL` is optional - leave it unset to use the public Arc Testnet RPC, or set your own Alchemy URL for better reliability.
 
    > **Note:** Deployment requires a **non-custodial wallet** (e.g. MetaMask) whose private key you can export. Custodial wallets like Circle passkey wallets do not expose private keys and cannot be used for deployment. The Circle wallet integration is for end users interacting with the deployed contracts via the frontend.
 
